@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import "Constants.h"
+#import "UIColor+AppColors.h"
 @interface AppDelegate ()
 
 @end
@@ -16,20 +17,17 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    
-    UIImage *activeImage = [[UIImage imageNamed:@"segment_active"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
-    UIImage *inactiveImage = [[UIImage imageNamed:@"segment_inactive"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
-    
-    [[UISegmentedControl appearance]  setBackgroundImage:inactiveImage
+
+    [[UISegmentedControl appearance]  setBackgroundImage:[UIColor imageFromColor:[UIColor segmentedControlNotSelectedColor] withFrame:CGRectMake(0, 0, 200, 30)]
                                                 forState:UIControlStateDisabled
                                               barMetrics:UIBarMetricsDefault];
-    [[UISegmentedControl appearance]  setBackgroundImage:inactiveImage
+    [[UISegmentedControl appearance]  setBackgroundImage:[UIColor imageFromColor:[UIColor segmentedControlNotSelectedColor] withFrame:CGRectMake(0, 0, 200, 30)]
                                                 forState:UIControlStateNormal
                                               barMetrics:UIBarMetricsDefault];
-    [[UISegmentedControl appearance]  setBackgroundImage:activeImage
+    [[UISegmentedControl appearance]  setBackgroundImage:[UIColor imageFromColor:[UIColor segmentedControlSelectedColor] withFrame:CGRectMake(0, 0, 200, 30)]
                                                 forState:UIControlStateSelected
                                               barMetrics:UIBarMetricsDefault];
-    [[UISegmentedControl appearance]  setBackgroundImage:inactiveImage
+    [[UISegmentedControl appearance]  setBackgroundImage:[UIColor imageFromColor:[UIColor segmentedControlNotSelectedColor] withFrame:CGRectMake(0, 0, 200, 30)]
                                                 forState:UIControlStateHighlighted
                                               barMetrics:UIBarMetricsDefault];
     
@@ -45,6 +43,9 @@
                                   forLeftSegmentState:UIControlStateNormal
                                     rightSegmentState:UIControlStateNormal
                                            barMetrics:UIBarMetricsDefault];
+    
+    [[UISegmentedControl appearance] setTintColor:[UIColor navBarTintColor]];
+    
     
     // Override point for customization after application launch.
     [IMGSession authenticatedSessionWithClientID:CLIENT_ID

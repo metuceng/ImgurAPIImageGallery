@@ -14,6 +14,7 @@
 #import "StaggeredLayout.h"
 #import "StaggeredLayoutForLandscape.h"
 #import "ImageDetailsViewController.h"
+#import "UIColor+AppColors.h"
 @interface ImagesViewController () <UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout>
 @property (strong, nonatomic) NSArray *imgDataSource;
 @end
@@ -46,7 +47,7 @@
 {
     [super viewDidLoad];
     style = SS_LIST;
-    [self.navigationController.navigationBar setTintColor:[UIColor blueColor]];
+    [self.navigationController.navigationBar setTintColor:[UIColor navBarTintColor]];
     searchData = [SearchData sharedSearchData];
     [gridView registerNib:[UINib nibWithNibName:@"ImageCell" bundle:nil] forCellWithReuseIdentifier:@"ImageCell"];
     
@@ -124,13 +125,13 @@
     if ([sender tag] == 0)
     {
         [sender setTag:1];
-        [sender setTintColor:[UIColor lightGrayColor]];
+        [sender setTintColor:[[UIColor navBarTintColor] colorWithAlphaComponent:0.2]];
         searchData.showViral = NO;
     }
     else
     {
         [sender setTag:0];
-        [sender setTintColor:[UIColor blueColor]];
+        [sender setTintColor:[UIColor navBarTintColor]];
         searchData.showViral = YES;
     }
     
@@ -149,7 +150,7 @@
 - ( void )openWindow
 {
     
-    windowHeightConstraint.constant = 40;
+    windowHeightConstraint.constant = 35;
     
     [UIView animateWithDuration:0.3 animations:^{
         [self.view layoutIfNeeded];
@@ -296,7 +297,7 @@
     
     if ([image imageDescription] == nil || [[image imageDescription] isEqualToString:@""]) {
         
-        [cell.imgDesctiption setText:@"N/A"];
+        [cell.imgDesctiption setText:@"-"];
     }
     
     [cell.upLabel       setText:[NSString stringWithFormat:@"%d", (int)[imp ups]]];

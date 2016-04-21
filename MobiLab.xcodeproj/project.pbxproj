@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4388DBCC1CC92E9800F315E9 /* UIImage+animatedGIF.m in Sources */ = {isa = PBXBuildFile; fileRef = 4388DBCB1CC92E9800F315E9 /* UIImage+animatedGIF.m */; };
 		43C1BFC31CC0317E00616DF8 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 43C1BFC21CC0317E00616DF8 /* main.m */; };
 		43C1BFC61CC0317E00616DF8 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 43C1BFC51CC0317E00616DF8 /* AppDelegate.m */; };
 		43C1BFC91CC0317E00616DF8 /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 43C1BFC81CC0317E00616DF8 /* BaseViewController.m */; };
@@ -23,6 +24,7 @@
 		43C1C0231CC4261900616DF8 /* StaggeredLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 43C1C0221CC4261900616DF8 /* StaggeredLayout.m */; };
 		43C1C0261CC5601A00616DF8 /* StaggeredLayoutForLandscape.m in Sources */ = {isa = PBXBuildFile; fileRef = 43C1C0251CC5601A00616DF8 /* StaggeredLayoutForLandscape.m */; };
 		43C1C0291CC5837E00616DF8 /* ImageDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 43C1C0281CC5837E00616DF8 /* ImageDetailsViewController.m */; };
+		43E81A001CC938C000709D8E /* UIColor+AppColors.m in Sources */ = {isa = PBXBuildFile; fileRef = 43E819FF1CC938C000709D8E /* UIColor+AppColors.m */; };
 		9695BD002B1B331138E6ED1F /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AE9AC99965C4A7C3CB639BFF /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -38,6 +40,8 @@
 
 /* Begin PBXFileReference section */
 		0C057DA6008010EE5E477DBF /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		4388DBCA1CC92E9800F315E9 /* UIImage+animatedGIF.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+animatedGIF.h"; sourceTree = "<group>"; };
+		4388DBCB1CC92E9800F315E9 /* UIImage+animatedGIF.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+animatedGIF.m"; sourceTree = "<group>"; };
 		43C1BFBE1CC0317E00616DF8 /* MobiLab.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MobiLab.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		43C1BFC21CC0317E00616DF8 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		43C1BFC41CC0317E00616DF8 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -69,6 +73,8 @@
 		43C1C0251CC5601A00616DF8 /* StaggeredLayoutForLandscape.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StaggeredLayoutForLandscape.m; sourceTree = "<group>"; };
 		43C1C0271CC5837E00616DF8 /* ImageDetailsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageDetailsViewController.h; sourceTree = "<group>"; };
 		43C1C0281CC5837E00616DF8 /* ImageDetailsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageDetailsViewController.m; sourceTree = "<group>"; };
+		43E819FE1CC938C000709D8E /* UIColor+AppColors.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+AppColors.h"; sourceTree = "<group>"; };
+		43E819FF1CC938C000709D8E /* UIColor+AppColors.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+AppColors.m"; sourceTree = "<group>"; };
 		777496D6B9FD16EAFDA1880E /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		AE9AC99965C4A7C3CB639BFF /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -184,11 +190,15 @@
 		43C1BFFA1CC17EA000616DF8 /* Utility Classes */ = {
 			isa = PBXGroup;
 			children = (
+				4388DBCA1CC92E9800F315E9 /* UIImage+animatedGIF.h */,
+				4388DBCB1CC92E9800F315E9 /* UIImage+animatedGIF.m */,
 				43C1BFFB1CC1915600616DF8 /* Constants.h */,
 				43C1C0211CC4261900616DF8 /* StaggeredLayout.h */,
 				43C1C0221CC4261900616DF8 /* StaggeredLayout.m */,
 				43C1C0241CC5601A00616DF8 /* StaggeredLayoutForLandscape.h */,
 				43C1C0251CC5601A00616DF8 /* StaggeredLayoutForLandscape.m */,
+				43E819FE1CC938C000709D8E /* UIColor+AppColors.h */,
+				43E819FF1CC938C000709D8E /* UIColor+AppColors.m */,
 			);
 			path = "Utility Classes";
 			sourceTree = "<group>";
@@ -376,6 +386,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				43C1BFF81CC17B2700616DF8 /* SearchData.m in Sources */,
+				43E81A001CC938C000709D8E /* UIColor+AppColors.m in Sources */,
 				43C1C0231CC4261900616DF8 /* StaggeredLayout.m in Sources */,
 				43C1C01E1CC3C2AB00616DF8 /* ImageCell.m in Sources */,
 				43C1C0291CC5837E00616DF8 /* ImageDetailsViewController.m in Sources */,
@@ -383,6 +394,7 @@
 				43C1C0261CC5601A00616DF8 /* StaggeredLayoutForLandscape.m in Sources */,
 				43C1BFC91CC0317E00616DF8 /* BaseViewController.m in Sources */,
 				43C1BFC61CC0317E00616DF8 /* AppDelegate.m in Sources */,
+				4388DBCC1CC92E9800F315E9 /* UIImage+animatedGIF.m in Sources */,
 				43C1BFC31CC0317E00616DF8 /* main.m in Sources */,
 				43C1BFF11CC12ED100616DF8 /* ImagesViewController.m in Sources */,
 			);
