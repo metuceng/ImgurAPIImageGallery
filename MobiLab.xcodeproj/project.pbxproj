@@ -25,6 +25,8 @@
 		43C1C0261CC5601A00616DF8 /* StaggeredLayoutForLandscape.m in Sources */ = {isa = PBXBuildFile; fileRef = 43C1C0251CC5601A00616DF8 /* StaggeredLayoutForLandscape.m */; };
 		43C1C0291CC5837E00616DF8 /* ImageDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 43C1C0281CC5837E00616DF8 /* ImageDetailsViewController.m */; };
 		43E81A001CC938C000709D8E /* UIColor+AppColors.m in Sources */ = {isa = PBXBuildFile; fileRef = 43E819FF1CC938C000709D8E /* UIColor+AppColors.m */; };
+		43E81A041CC94A5200709D8E /* CreditsView.m in Sources */ = {isa = PBXBuildFile; fileRef = 43E81A031CC94A5200709D8E /* CreditsView.m */; };
+		43E81A061CC94A6600709D8E /* CreditsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 43E81A051CC94A6600709D8E /* CreditsView.xib */; };
 		9695BD002B1B331138E6ED1F /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AE9AC99965C4A7C3CB639BFF /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -75,6 +77,9 @@
 		43C1C0281CC5837E00616DF8 /* ImageDetailsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageDetailsViewController.m; sourceTree = "<group>"; };
 		43E819FE1CC938C000709D8E /* UIColor+AppColors.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+AppColors.h"; sourceTree = "<group>"; };
 		43E819FF1CC938C000709D8E /* UIColor+AppColors.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+AppColors.m"; sourceTree = "<group>"; };
+		43E81A021CC94A5200709D8E /* CreditsView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CreditsView.h; sourceTree = "<group>"; };
+		43E81A031CC94A5200709D8E /* CreditsView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CreditsView.m; sourceTree = "<group>"; };
+		43E81A051CC94A6600709D8E /* CreditsView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CreditsView.xib; sourceTree = "<group>"; };
 		777496D6B9FD16EAFDA1880E /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		AE9AC99965C4A7C3CB639BFF /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -121,6 +126,7 @@
 		43C1BFC01CC0317E00616DF8 /* MobiLab */ = {
 			isa = PBXGroup;
 			children = (
+				43E81A011CC94A2700709D8E /* Components */,
 				43C1BFFA1CC17EA000616DF8 /* Utility Classes */,
 				43C1BFF21CC1687B00616DF8 /* Assets */,
 				43C1BFEE1CC12E9C00616DF8 /* Controller Classes */,
@@ -211,6 +217,16 @@
 				43C1C01F1CC3C2C000616DF8 /* ImageCell.xib */,
 			);
 			path = "Custom Cells";
+			sourceTree = "<group>";
+		};
+		43E81A011CC94A2700709D8E /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				43E81A021CC94A5200709D8E /* CreditsView.h */,
+				43E81A031CC94A5200709D8E /* CreditsView.m */,
+				43E81A051CC94A6600709D8E /* CreditsView.xib */,
+			);
+			path = Components;
 			sourceTree = "<group>";
 		};
 		7FB571E941E5B9A33B4B7ADB /* Pods */ = {
@@ -320,6 +336,7 @@
 				43C1BFF41CC1689600616DF8 /* Icons.xcassets in Resources */,
 				43C1C0201CC3C2C000616DF8 /* ImageCell.xib in Resources */,
 				43C1BFCC1CC0317E00616DF8 /* Main.storyboard in Resources */,
+				43E81A061CC94A6600709D8E /* CreditsView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -396,6 +413,7 @@
 				43C1BFC61CC0317E00616DF8 /* AppDelegate.m in Sources */,
 				4388DBCC1CC92E9800F315E9 /* UIImage+animatedGIF.m in Sources */,
 				43C1BFC31CC0317E00616DF8 /* main.m in Sources */,
+				43E81A041CC94A5200709D8E /* CreditsView.m in Sources */,
 				43C1BFF11CC12ED100616DF8 /* ImagesViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -528,9 +546,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = MobiLab/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "Ahmet-Abak.MobiLab";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -540,9 +560,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = MobiLab/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "Ahmet-Abak.MobiLab";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

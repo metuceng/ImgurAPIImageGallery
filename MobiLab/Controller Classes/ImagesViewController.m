@@ -15,6 +15,7 @@
 #import "StaggeredLayoutForLandscape.h"
 #import "ImageDetailsViewController.h"
 #import "UIColor+AppColors.h"
+#import "CreditsView.h"
 @interface ImagesViewController () <UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout>
 @property (strong, nonatomic) NSArray *imgDataSource;
 @end
@@ -27,7 +28,7 @@
     __weak IBOutlet UICollectionView *gridView;
     ShowStyle style;
     SearchData *searchData;
-
+    CreditsView *creditsView;
 }
 
 - (void)viewDidAppear:(BOOL)animated
@@ -120,8 +121,36 @@
     [self loadImagesForTopSection];
 }
 
+
+- (IBAction)aboutUsClicked:(id)sender
+{
+    if ([creditsView isDescendantOfView:self.view]) {
+        [creditsView removeFromSuperview];
+        return;
+    }
+    
+    if (!creditsView)
+    {
+        creditsView  = [CreditsView new];
+        creditsView.backgroundColor = [[UIColor blackColor] colorWithAlphaComponent:0.5];
+    }
+    
+    creditsView.translatesAutoresizingMaskIntoConstraints = YES;
+    creditsView.frame = [UIScreen mainScreen].bounds;
+    [self.view addSubview:creditsView];
+    creditsView.layer.zPosition = FLT_MAX;
+    
+    NSLog(@"%@", NSStringFromCGRect([[[UIApplication sharedApplication] delegate] window].bounds));
+    
+}
+
 - (IBAction)viralToggled:(id)sender
 {
+    
+    if ([creditsView isDescendantOfView:self.view]) {
+        [creditsView removeFromSuperview];
+    }
+    
     if ([sender tag] == 0)
     {
         [sender setTag:1];
@@ -159,6 +188,10 @@
 
 - (IBAction)layoutOptionChanged:(id)sender
 {
+    if ([creditsView isDescendantOfView:self.view]) {
+        [creditsView removeFromSuperview];
+    }
+    
     if ([sender tag] == 1)
     {
         style = SS_STAGGERED;

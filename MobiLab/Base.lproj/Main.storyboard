@@ -357,7 +357,11 @@
                         </variation>
                     </view>
                     <navigationItem key="navigationItem" title="Imgur Gallery" id="dOR-5o-jhg">
-                        <barButtonItem key="leftBarButtonItem" image="icon_drawer" style="plain" id="yJy-7T-PSz"/>
+                        <barButtonItem key="leftBarButtonItem" image="icon_drawer" style="plain" id="yJy-7T-PSz">
+                            <connections>
+                                <action selector="aboutUsClicked:" destination="ooV-8S-4X5" id="GtW-8c-Mfv"/>
+                            </connections>
+                        </barButtonItem>
                         <rightBarButtonItems>
                             <barButtonItem image="icon_list" style="plain" id="tNW-Ei-BcG">
                                 <connections>

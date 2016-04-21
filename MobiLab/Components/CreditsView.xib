@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10116" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="CreditsView">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="f1Q-E1-nHo">
+                    <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Imgur Gallery v1.0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dad-Yw-NrG">
+                            <rect key="frame" x="-42" y="-21" width="42" height="21"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <color key="textColor" red="0.92549019610000005" green="0.94117647059999998" blue="0.94509803920000002" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ahmet Abak" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9BC-0n-q3E">
+                            <rect key="frame" x="-42" y="-21" width="42" height="21"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <color key="textColor" red="0.92549019610000005" green="0.94117647059999998" blue="0.94509803920000002" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" red="0.90588235289999997" green="0.29803921570000003" blue="0.23529411759999999" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstItem="Dad-Yw-NrG" firstAttribute="centerX" secondItem="f1Q-E1-nHo" secondAttribute="centerX" id="OW3-u1-vr0"/>
+                        <constraint firstAttribute="width" secondItem="f1Q-E1-nHo" secondAttribute="height" multiplier="1.5" id="U9D-SX-9ci"/>
+                        <constraint firstItem="9BC-0n-q3E" firstAttribute="centerX" secondItem="f1Q-E1-nHo" secondAttribute="centerX" id="Wel-wP-lYd"/>
+                        <constraint firstItem="Dad-Yw-NrG" firstAttribute="centerY" secondItem="f1Q-E1-nHo" secondAttribute="centerY" multiplier="0.5" id="fR5-Nz-tdA"/>
+                        <constraint firstItem="9BC-0n-q3E" firstAttribute="centerY" secondItem="f1Q-E1-nHo" secondAttribute="centerY" multiplier="1.5" id="lVm-h2-dVI"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                        <userDefinedRuntimeAttribute type="string" keyPath="layer.cornerRadius" value="10"/>
+                    </userDefinedRuntimeAttributes>
+                    <variation key="default">
+                        <mask key="subviews">
+                            <exclude reference="Dad-Yw-NrG"/>
+                            <exclude reference="9BC-0n-q3E"/>
+                        </mask>
+                        <mask key="constraints">
+                            <exclude reference="U9D-SX-9ci"/>
+                            <exclude reference="OW3-u1-vr0"/>
+                            <exclude reference="fR5-Nz-tdA"/>
+                            <exclude reference="Wel-wP-lYd"/>
+                            <exclude reference="lVm-h2-dVI"/>
+                        </mask>
+                    </variation>
+                    <variation key="heightClass=compact">
+                        <mask key="subviews">
+                            <include reference="Dad-Yw-NrG"/>
+                            <include reference="9BC-0n-q3E"/>
+                        </mask>
+                        <mask key="constraints">
+                            <include reference="U9D-SX-9ci"/>
+                            <include reference="OW3-u1-vr0"/>
+                            <include reference="fR5-Nz-tdA"/>
+                            <include reference="Wel-wP-lYd"/>
+                            <include reference="lVm-h2-dVI"/>
+                        </mask>
+                    </variation>
+                    <variation key="heightClass=regular-widthClass=compact">
+                        <mask key="subviews">
+                            <include reference="Dad-Yw-NrG"/>
+                            <include reference="9BC-0n-q3E"/>
+                        </mask>
+                        <mask key="constraints">
+                            <include reference="U9D-SX-9ci"/>
+                            <include reference="OW3-u1-vr0"/>
+                            <include reference="fR5-Nz-tdA"/>
+                            <include reference="Wel-wP-lYd"/>
+                            <include reference="lVm-h2-dVI"/>
+                        </mask>
+                    </variation>
+                </view>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bVM-Gz-LYX">
+                    <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                    <connections>
+                        <action selector="close:" destination="iN0-l3-epB" eventType="touchUpInside" id="j8S-ba-QND"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="f1Q-E1-nHo" firstAttribute="height" secondItem="iN0-l3-epB" secondAttribute="height" multiplier="0.5" id="9Bj-yZ-XD9"/>
+                <constraint firstItem="bVM-Gz-LYX" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="BNg-a2-WR0"/>
+                <constraint firstItem="bVM-Gz-LYX" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="Wbu-jl-aFJ"/>
+                <constraint firstItem="f1Q-E1-nHo" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="gL6-b9-lSf"/>
+                <constraint firstItem="bVM-Gz-LYX" firstAttribute="height" secondItem="iN0-l3-epB" secondAttribute="height" id="hv9-LB-wIt"/>
+                <constraint firstItem="f1Q-E1-nHo" firstAttribute="width" secondItem="iN0-l3-epB" secondAttribute="width" multiplier="0.8" id="pxp-zu-5ZI"/>
+                <constraint firstItem="f1Q-E1-nHo" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="wd5-bO-3Rw"/>
+                <constraint firstItem="bVM-Gz-LYX" firstAttribute="width" secondItem="iN0-l3-epB" secondAttribute="width" id="xqD-dS-WnB"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <variation key="default">
+                <mask key="subviews">
+                    <exclude reference="f1Q-E1-nHo"/>
+                    <exclude reference="bVM-Gz-LYX"/>
+                </mask>
+                <mask key="constraints">
+                    <exclude reference="BNg-a2-WR0"/>
+                    <exclude reference="Wbu-jl-aFJ"/>
+                    <exclude reference="hv9-LB-wIt"/>
+                    <exclude reference="xqD-dS-WnB"/>
+                    <exclude reference="9Bj-yZ-XD9"/>
+                    <exclude reference="gL6-b9-lSf"/>
+                    <exclude reference="pxp-zu-5ZI"/>
+                    <exclude reference="wd5-bO-3Rw"/>
+                </mask>
+            </variation>
+            <variation key="heightClass=compact">
+                <mask key="subviews">
+                    <include reference="f1Q-E1-nHo"/>
+                    <include reference="bVM-Gz-LYX"/>
+                </mask>
+                <mask key="constraints">
+                    <include reference="BNg-a2-WR0"/>
+                    <include reference="Wbu-jl-aFJ"/>
+                    <include reference="hv9-LB-wIt"/>
+                    <include reference="xqD-dS-WnB"/>
+                    <include reference="9Bj-yZ-XD9"/>
+                    <include reference="gL6-b9-lSf"/>
+                    <include reference="wd5-bO-3Rw"/>
+                </mask>
+            </variation>
+            <variation key="heightClass=regular-widthClass=compact">
+                <mask key="subviews">
+                    <include reference="f1Q-E1-nHo"/>
+                    <include reference="bVM-Gz-LYX"/>
+                </mask>
+                <mask key="constraints">
+                    <include reference="BNg-a2-WR0"/>
+                    <include reference="Wbu-jl-aFJ"/>
+                    <include reference="hv9-LB-wIt"/>
+                    <include reference="xqD-dS-WnB"/>
+                    <include reference="gL6-b9-lSf"/>
+                    <include reference="pxp-zu-5ZI"/>
+                    <include reference="wd5-bO-3Rw"/>
+                </mask>
+            </variation>
+            <point key="canvasLocation" x="85" y="238"/>
+        </view>
+    </objects>
+</document>
