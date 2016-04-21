@@ -88,7 +88,7 @@
 -(BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation{
    
     //app must register url scheme which starts the app at this endpoint with the url containing the code
-    NSLog(@"url %@", url);
+    //NSLog(@"url %@", url);
     NSMutableDictionary *params = [[NSMutableDictionary alloc] init];
     for (NSString *param in [[url query] componentsSeparatedByString:@"&"]) {
         NSArray *elts = [param componentsSeparatedByString:@"="];
@@ -123,15 +123,6 @@
     return YES;
 }
 
--(void)imgurSessionModelFetched:(id)model
-{
-    NSLog(@"%@", model);
-}
-
--(void)imgurSessionUserRefreshed:(IMGAccount *)user
-{
-    NSLog(@"%@", user.debugDescription);
-}
 
 - (void)imgurSessionNeedsExternalWebview:(NSURL *)url completion:(void (^)())completion
 {

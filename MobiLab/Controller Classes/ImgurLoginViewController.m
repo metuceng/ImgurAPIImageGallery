@@ -31,14 +31,10 @@
 -(void)reload{
     [IMGGalleryRequest hotGalleryPage:0 withViralSort:YES success:^(NSArray *objects)
     {
-        NSLog(@"%@",[IMGSession sharedInstance].user.username);
-        
         [self performSegueWithIdentifier:@"goToGallery" sender:self];
         
     } failure:^(NSError *error)
     {
-        
-        NSLog(@"gallery request failed - %@" ,error.localizedDescription);
     }];
     
     

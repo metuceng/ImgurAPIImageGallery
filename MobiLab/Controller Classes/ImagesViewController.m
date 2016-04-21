@@ -138,9 +138,6 @@
     creditsView.translatesAutoresizingMaskIntoConstraints = YES;
     creditsView.frame = [UIScreen mainScreen].bounds;
     [self.view addSubview:creditsView];
-    creditsView.layer.zPosition = FLT_MAX;
-    
-    NSLog(@"%@", NSStringFromCGRect([[[UIApplication sharedApplication] delegate] window].bounds));
     
 }
 
@@ -249,8 +246,6 @@
 
 - (void)loadImagesForTopSection
 {
-    NSLog(@"TOP with Value %ld", (long)searchData.window);
-    
     self.imgDataSource = nil;
     [IMGGalleryRequest topGalleryPage:searchData.page
                            withWindow:searchData.window
@@ -298,7 +293,6 @@
     
     if ([[[image url] relativeString] hasSuffix:@".gif"])
     {
-        NSLog(@"%@", [[image link] absoluteString]);
         [cell.imgImage setImageWithURLRequest:[NSURLRequest requestWithURL:[image url]
                                                                cachePolicy:NSURLRequestReturnCacheDataElseLoad
                                                            timeoutInterval:30]

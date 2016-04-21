@@ -16,7 +16,6 @@
 }
 
 - (IBAction)close:(id)sender {
-    NSLog(@"close");
     [self removeFromSuperview];
 }
 @end

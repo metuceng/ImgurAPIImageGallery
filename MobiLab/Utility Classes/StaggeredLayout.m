@@ -137,7 +137,6 @@
 
 - (void)invalidateLayout
 {
-    NSLog(@"layout invalidated");
     [super invalidateLayout];
     [cache removeAllObjects];
 }
