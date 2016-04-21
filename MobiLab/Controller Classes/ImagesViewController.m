@@ -29,6 +29,7 @@
     ShowStyle style;
     SearchData *searchData;
     CreditsView *creditsView;
+    CGFloat lastScrollViewPositionY;
 }
 
 - (void)viewDidAppear:(BOOL)animated
@@ -47,6 +48,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    lastScrollViewPositionY = 0;
     style = SS_LIST;
     [self.navigationController.navigationBar setTintColor:[UIColor navBarTintColor]];
     searchData = [SearchData sharedSearchData];
@@ -337,6 +339,7 @@
 
 -(void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
 {
+    [self.navigationController setNavigationBarHidden:NO animated:YES];
     //request details of book here
     ImageDetailsViewController *vc = (ImageDetailsViewController *)[[UIStoryboard storyboardWithName:@"Main" bundle:nil] instantiateViewControllerWithIdentifier:@"ImagesVC"];
     vc.imp = [_imgDataSource objectAtIndex:indexPath.row];
@@ -432,7 +435,36 @@
 
 }
 
+-(void)scrollViewDidScroll:(UIScrollView *)scrollView
+{
+    if (scrollView.contentOffset.y == 0) {
+        
+        [self.navigationController setNavigationBarHidden:NO animated:YES];
+    }
+}
 
+-(void)scrollViewWillEndDragging:(UIScrollView *)scrollView withVelocity:(CGPoint)velocity targetContentOffset:(inout CGPoint *)targetContentOffset
+{
+    CGFloat y = scrollView.contentOffset.y;
+    if (y > (lastScrollViewPositionY + 200))
+    {
+        [self.navigationController setNavigationBarHidden:YES animated:YES];
+        lastScrollViewPositionY = y;
+    }
+    else if(y < (lastScrollViewPositionY - 200))
+    {
+        [self.navigationController setNavigationBarHidden:NO animated:YES];
+        lastScrollViewPositionY = y;
+    }
+    else if(y == 0)
+    {
+        [self.navigationController setNavigationBarHidden:NO animated:YES];
+        lastScrollViewPositionY = y;
+    }
+    
+}
+
+#pragma -mark -transition methods
 //transition
 - (void)viewWillTransitionToSize:(CGSize)size withTransitionCoordinator:(id<UIViewControllerTransitionCoordinator>)coordinator
 {
